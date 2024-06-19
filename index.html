@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage that displays information about the latest movie trailers.">
+    <meta name="keywords" content="movie, trailers, bollywood, hollywood">
+    <meta name="author" content="Webdew">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Latest Movie Trailers">
+    <meta property="og:description" content="A webpage that displays information about the latest movie trailers.">
+    <meta property="og:image" content="https://abcexample.com/images/abcexample.jpg">
+    <meta property="og:url" content="https://abcexample.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="latest_movie_trailers">
+    <meta name="twitter:site" content="@abcexample">
+    <meta name="twitter:title" content="Latest Movie Trailers">
+    <meta name="twitter:description" content="A webpage that displays information about the latest movie trailers.">
+    <meta name="twitter:image" content="https://abcexample.com/images/abcexample.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!--External Links CSS & JS-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.0.1/color-thief.min.js"></script>
+
+    <title>Latest Movie Trailers</title>
+
+    <script>
+      function openPopup(el) {
+        $('.popup').hide();
+        $('#' + el).fadeIn(200);   
+      }
+
+      function closePopup(el) {
+        $('.popup').fadeOut(300);
+        $("#" + el).attr('src', $("#" + el).attr('src'));
+      }
+
+    </script>
+</head>
+<body>
+<header class="header" id="header">
+   <nav class="navbar container">
+      <section class="navbar-left">
+         <a href="#" class="brand w-100"><img src="./images/logo.png"/></a>
+         <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+         </div>
+      </section>
+      <section class="navbar-center">
+         <span class="overlay"></span>
+         <div class="menu" id="menu">
+            <div class="menu-header">
+               <span class="menu-arrow"><i class="bx bx-chevron-left"></i></span>
+               <span class="menu-title"></span>
+            </div>
+            <ul class="menu-inner">
+               <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+               <li class="menu-item menu-dropdown">
+                  <span class="menu-link">Collection<i class="bx bx-chevron-right"></i></span>
+                  <div class="submenu megamenu megamenu-column-4">
+                     <div class="submenu-inner">
+                        <h4 class="submenu-title">Bollywood</h4>
+                        <ul class="submenu-list">
+                           <li class="submenu-item"><a href="#" class="submenu-link">Gadar 2</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">OMG 2</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Jawan</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Raid</a></li>
+                        </ul>
+                        <h4 class="submenu-title">Hollywood</h4>
+                        <ul class="submenu-list">
+                           <li class="submenu-item"><a href="#" class="submenu-link">Avengers</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Batman</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Superman</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Ironman 3</a></li>
+                        </ul>
+                     </div>
+                     <div class="submenu-inner">
+                        <h4 class="submenu-title">Comedy</h4>
+                        <ul class="submenu-list">
+                           <li class="submenu-item"><a href="#" class="submenu-link">Dhol</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Dhamaal</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">ABCD</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Comedy Class</a></li>
+                        </ul>
+                        <h4 class="submenu-title">Drama</h4>
+                        <ul class="submenu-list">
+                           <li class="submenu-item"><a href="#" class="submenu-link">Padmawat</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Jodha Akbar</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Raazi</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Hungama</a></li>
+                        </ul>
+                     </div>
+                     <div class="submenu-inner">
+                        <h4 class="submenu-title">Action</h4>
+                        <ul class="submenu-list">
+                           <li class="submenu-item"><a href="#" class="submenu-link">Ironman 1</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Ironman 2</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">Ipman 1</a></li>
+                           <li class="submenu-item"><a href="#" class="submenu-link">IPman 2</a></li>
+                        </ul>
+                     </div>
+                     <div class="submenu-inner">
+                        <img src="./images/jawan-poster.jpg" class="submenu-image" alt="Product">
+                     </div>
+                  </div>
+               </li>
+               <li class="menu-item menu-dropdown">
+                  <span class="menu-link">New Movies<i class="bx bx-chevron-right"></i></span>
+                  <div class="submenu megamenu megamenu-column-4">
+                     <div class="submenu-inner">
+                        <a href="#" class="submenu-link">
+                           <img src="./images/jawan-poster.jpg" class="submenu-image" alt="Product">
+                           <span class="submenu-title">Jawan</span>
+                        </a>
+                     </div>
+                     <div class="submenu-inner">
+                        <a href="#" class="submenu-link">
+                           <img src="./images/omg-2-poster.jpg" class="submenu-image" alt="Product">
+                           <span class="submenu-title">Omg 2</span>
+                        </a>
+                     </div>
+                     <div class="submenu-inner">
+                        <a href="#" class="submenu-link">
+                           <img src="./images/gadar-2-poster.jpg" class="submenu-image" alt="Product">
+                           <span class="submenu-title">Gadar 2</span>
+                        </a>
+                     </div>
+                     <div class="submenu-inner">
+                        <a href="#" class="submenu-link">
+                           <img src="./images/dream-girl-2-poster.jpg" class="submenu-image" alt="Product">
+                           <span class="submenu-title">Dream Girl 2</span>
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="menu-item menu-dropdown">
+                  <span class="menu-link">Account<i class="bx bx-chevron-right"></i></span>
+                  <div class="submenu megamenu megamenu-column-1">
+                     <ul class="submenu-list">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Login</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Register</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Help</a></li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="menu-item"><a href="#" class="menu-link">Trending</a></li>
+            </ul>
+         </div>
+      </section>
+      <section class="navbar-right">
+         <button class="switch" id="switch">
+            <span class="switch-light"><i class="bx bx-sun"></i></span>
+            <span class="switch-dark"><i class="bx bx-moon"></i></span>
+         </button>
+      </section>
+   </nav>
+</header>
+<section class="mid_section">
+   <div class="swiper-container main-slider loading">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/jawan.jpg)">
+            <img src="./images/jawan.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Jawan</p>
+            <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/dreamgirl2.jpg)">
+            <img src="./images/dreamgirl2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Dream Girl 2</p>
+            <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/gadar2.jpg)">
+            <img src="./images/gadar2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Gadar 2</p>
+            <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/omg2.jpg)">
+            <img src="./images/omg2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">OMG 2</p>
+            <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/rnrkk.jpg)">
+            <img src="./images/rnrkk.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Rocky Aur Rani Kii Prem Kahaani</p>
+            <span class="caption">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          </div>
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+    
+    <!-- Thumbnail navigation -->
+    <div class="swiper-container nav-slider loading">
+      <div class="swiper-wrapper" role="navigation">
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/jawan.jpg)">
+            <img src="./images/jawan.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Jawan</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/dreamgirl2.jpg)">
+            <img src="./images/dreamgirl2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Dream Girl</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/gadar2.jpg)">
+            <img src="./images/gadar2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Gadar 2</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/omg2.jpg)">
+            <img src="./images/omg2.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">OMG 2</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <figure class="slide-bgimg" style="background-image:url(./images/rnrkk.jpg)">
+            <img src="./images/rnrkk.jpg" class="entity-img" />
+          </figure>
+          <div class="content">
+            <p class="title">Rocky Aur Rani Kii Prem Kahaani</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--Grid Layout-->
+<section>
+  <div class="main_heading">
+    <h1>Latest Movies<span>Bollywood</span></h1>
+  </div>
+  <div class="movie_section">
+   <div class="movie_card" id="bright">
+      <div class="info_section">
+        <div class="movie_header">
+          <img class="locandina" src="./images/jawan-poster.jpg"/>
+          <h1>JAWAN</h1>
+          <h4>2023, Atlee</h4>
+          <span class="minutes">169 min</span>
+          <p class="type">Action, Thriller</p>
+          <p class="rating">⭐ 8.2/10 Stars</p>
+        </div>
+        <div class="movie_desc">
+          <p class="text">
+            A high-octane action thriller that outlines the emotional journey of a man who is set to rectify the wrongs in society.
+          </p>
+          <a href="#" class="icon-play" onClick="openPopup('div1');"></a>
+        </div>
+      </div>
+      <div class="blur_back bright_back"></div>
+    </div>
+    
+    <div class="movie_card" id="tomb">
+      <div class="info_section">
+        <div class="movie_header">
+          <img class="locandina" src="./images/gadar-2-poster.jpg"/>
+          <h1>Gadar 2</h1>
+          <h4>2023, Anil Sharma</h4>
+          <span class="minutes">170 min</span>
+          <p class="type">Period, Drama</p>
+          <p class="rating">⭐ 7.6/10 Stars</p>
+        </div>
+        <div class="movie_desc">
+          <p class="text">
+            Gadar 2 brings back India`s most loved family of Tara, Sakeena and Jeete; 22 years after its predecessor. Set against the backdrop of Indo-Pakistan war of 1971.
+          </p>
+          <a href="#" class="icon-play" onClick="openPopup('div2');"></a>
+        </div>
+      </div>
+      <div class="blur_back tomb_back"></div>
+    </div>
+    
+    <div class="movie_card" id="ave">
+      <div class="info_section">
+        <div class="movie_header">
+          <img class="locandina" src="./images/omg-2-poster.jpg"/>
+          <h1>Omg 2</h1>
+          <h4>2023, Amit Rai</h4>
+          <span class="minutes">134 min</span>
+          <p class="type">Comedy, Family</p>
+          <p class="rating">⭐ 8.5/10 Stars</p>
+        </div>
+        <div class="movie_desc">
+          <p class="text">Life is bliss until one day Kanti Sharan Mudgal`s son Vivek is blamed for immoral conduct and expelled from school.</p>
+          <a href="#" class="icon-play" onClick="openPopup('div3');"></a>
+        </div>
+      </div>
+      <div class="blur_back ave_back"></div>
+    </div>
+  </div>
+</section>
+
+<div id="result"></div>
+
+<!--Modal or PopUP-->
+<div id="div1" class="popup" style="display:none;">
+  <iframe class="youtube-video" id="yt1" width="1180" height="480" src="https://www.youtube.com/embed/COv52Qyctws?si=jWrntaH7znHXgcIO" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <div class="cancel" onclick="closePopup('yt1');">&times;</div>
+</div>
+<!--Modal or PopUP 2-->
+<div id="div2" class="popup" style="display:none;">
+  <iframe class="youtube-video" id="yt2" width="1180" height="480" src="https://www.youtube.com/embed/vhwr4vc_GY0?si=JZ3Nvl8ExpZhcY79" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <div class="cancel" onclick="closePopup('yt2');">&times;</div>
+</div>
+<!--Modal or PopUP 3-->
+<div id="div3" class="popup" style="display:none;">
+  <iframe class="youtube-video" id="yt3" width="1180" height="480" src="https://www.youtube.com/embed/Y6ZKXqM7HNQ?si=DjVW_pFc84NOSDHJ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <div class="cancel" onclick="closePopup('yt3');">&times;</div>
+</div>
+
+</body>
+
+    <!--JS Links-->
+    <script src="./js/main.js"></script>
+    <script src="./js/slider.js"></script>
+
+</html>
